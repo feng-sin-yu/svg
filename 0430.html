@@ -1,0 +1,45 @@
+<html>
+<body >
+  <input type="radio" id="r1" name="W" checked="true" onclick="changeImg()">W/L 300/1000 <br>
+  <input type="radio" id="r2" name="W" onclick="changeImg()">W/L  600/1000 <br>
+  <input type="radio" id="r3" name="W" onclick="changeImg()" >W/L  1200/1000 <br>
+  
+  <div style="position: relative;">
+    <img id="img1" src="https://i.pinimg.com/564x/78/d0/72/78d072376a0aa0ab56d11c374532dbda.jpg"
+  width="500" height="499" style="position: absolute;  left: 0px; top:0px; z-index:1;" />
+    <svg width="500" height="499" style="position: absolute;  left: 0px; top:0px; z-index: 2" >
+        <text x="15" y="0" fill="red">110316120 酆芯宇</text>
+        <circle cx="260" cy="200" r="60" stroke="blue" stroke-width="7" fill="none" />
+        <ellipse cx="200" cy="80" rx="100" ry="50" style="fill:yellow;stroke-width:2" />   
+        <line x1="80" y1="50" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />  
+     </svg> 
+         
+  </div>
+</body>
+    <script type="text/javascript">
+    
+    function changeImg() { 
+    //  jpgDir/500-499.PNG" 
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("110316120 酆芯宇", 10, 0);
+
+      //  alert("aaa");
+        if (document.getElementById("r1").checked == true) {
+                document.getElementById("img1").src = "jpgDir/300-1000.PNG" 
+            }
+
+        if (document.getElementById("r2").checked == true) {
+                document.getElementById("img1").src = "jpgDir/600-1500.PNG" 
+            }
+
+        if (document.getElementById("r3").checked == true) {
+                document.getElementById("img1").src = "jpgDir/1200-1000.PNG" 
+            }  
+
+        }        
+
+    </script>
+
+</html>
